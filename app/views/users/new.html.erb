@@ -1,0 +1,29 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>bummer, something is not right here</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.text_field :first_name, placeholder: "first name" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :last_name, placeholder: "last name" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email, placeholder: "email" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, placeholder: "password" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, placeholder: "sorry, password again:(" %>
+  </div>
+  <div class="actions"><%= f.submit "yayy! finally done"%></div>
+<% end %>
