@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421001926) do
+ActiveRecord::Schema.define(version: 20170424203718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "categories_uploads", id: false, force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "upload_id",   null: false
+  end
+
+  create_table "uploads", force: :cascade do |t|
+    t.string   "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_uploads_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -24,4 +47,5 @@ ActiveRecord::Schema.define(version: 20170421001926) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "uploads", "users"
 end
