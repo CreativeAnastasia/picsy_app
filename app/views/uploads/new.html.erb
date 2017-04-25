@@ -1,0 +1,11 @@
+<h1>Upload Now!</h1>
+
+<%= form_for @upload, url: uploads_path, html: { multipart: true } do |form| %>
+
+  <%= form.label :description %>
+  <%= form.text_field :description %><br>
+
+  <%= form.file_field :image %><br><br>
+
+  <%= form.submit 'Upload now!' %>
+<% end %>

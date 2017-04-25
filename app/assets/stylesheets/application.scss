@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background: image-url("welcome_pic.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+.navbar.transparent.navbar-inverse {
+   background: rgba(0,0,0,0.3);
+   border: 0;
+}
+
+.nav.navbar-nav li a {
+  font-size: 20px;
+  color: white;
+}
+.nav.navbar-nav li a:hover {
+  background-color: hsla(0, 52%, 21%, 0.30);
+  color: #fbcbd3;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-size: 35px;
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    background-color: hsla(0, 52%, 21%, 0.20);
+    color: #fbcbd3;
+}
+
+.navbar-text.pull-right p {
+  color: #6d1413;
+}
+
+
+
+
+
+

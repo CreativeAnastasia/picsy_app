@@ -1,0 +1,8 @@
+<h1>My Uploads</h1>
+
+<%= @uploads.count %>
+<% @uploads.each do |upload| %>
+  <p> <%= upload.description %></p>
+ <%= image_tag upload.image.url %>
+ <%= link_to 'View Image', upload_path(upload) %></p>
+<% end %>

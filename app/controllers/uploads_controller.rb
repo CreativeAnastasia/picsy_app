@@ -1,2 +1,28 @@
 class UploadsController < ApplicationController
-end
+    def index
+      @uploads = Upload.all
+    end
+
+    def show
+       @upload = Upload.find(params[:id])
+    end
+
+    def new
+      @upload = Upload.new
+    end
+
+    def create
+      @upload = Upload.create(upload_params)
+      @upload.user = current_user
+      if @upload.save
+        redirect_to uploads_path
+      else
+        render :new
+      end
+    end
+
+  private
+    def upload_params
+      params.require(:upload).permit(:description, :image)
+    end
+  end
