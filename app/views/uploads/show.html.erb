@@ -1,3 +1,5 @@
 <li>Description<p>
 <%= @upload.description %></p></li>
 <%= image_tag @upload.image.url %>
+
+<%= link_to 'Delete', @upload, method: :delete, data: { confirm: 'Are you sure?' } if current_user %>
