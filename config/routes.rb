@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   resources :uploads
   resources :categories
 
-  get '/profile', to: 'users#show', as: :profile
+  get '/account', to: 'users#show', as: :account
 
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 
-  get '/myprofile', to: 'users#myprofile', as: :myprofile
+  get '/profile', to: 'users#profile', as: :profile
 
 end

@@ -21,6 +21,19 @@ class UploadsController < ApplicationController
     end
   end
 
+  def edit
+    @upload = Upload.find(params[:id])
+  end
+
+  def update
+    @upload = Upload.find(params[:id])
+      if @upload.update(upload_params)
+        redirect_to @upload, notice: 'Picture was successfully updated.'
+      else
+        render :edit
+      end
+  end
+
   def destroy
     @upload = Upload.find(params[:id])
       if @upload.destroy

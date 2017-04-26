@@ -11,7 +11,10 @@ class UsersController < ApplicationController
   def show
   end
 
-  def myprofile
+  def edit
+  end
+
+  def profile
   end
 
   def create
