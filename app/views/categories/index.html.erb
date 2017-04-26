@@ -1,0 +1,21 @@
+<fieldset class="search-form">
+  <legend>Search Our Database</legend>
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :name_cont, "Name contains" %>
+      <%= f.text_field :name_cont %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Categories Search" %><br />
+      <%= f.collection_check_boxes :categories_id_in_any, Category.all, :id, :category_name do |b| %>
+        <div class="collection-check-box">
+          <%= b.check_box %>
+          <%= b.label %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
+</fieldset>

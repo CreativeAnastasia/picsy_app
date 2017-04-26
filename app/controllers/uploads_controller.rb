@@ -25,6 +25,7 @@ class UploadsController < ApplicationController
 
   def edit
     @upload = Upload.find(params[:id])
+    @categories = Category.all
   end
 
   def update

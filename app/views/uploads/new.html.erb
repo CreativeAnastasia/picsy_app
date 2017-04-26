@@ -15,14 +15,6 @@
   </div>
 <% end %>
 
-<div class="container">
-  <div class="row text-center">
-    <% @categories.each do |c| %>
-      <label for="default" class="btn btn-default"><%= c.category_name %> <input type="checkbox" id="default" class="badgebox"></label>
-    <% end %>
-  </div>
-</div>
-
   <%= form.submit 'Upload now!' %>
 <% end %>
 
