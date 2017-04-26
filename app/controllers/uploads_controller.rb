@@ -1,10 +1,20 @@
 class UploadsController < ApplicationController
+
   def index
-    @uploads = Upload.all
-      end
+    @uploads = current_user.uploads
+  end
+
+  def all
+    if !params.has_key?(:cat) || params[:cat] == 'all'
+      @uploads = Upload.all
+    else
+      @uploads = Upload.includes(:categories).where(categories: {id: params[:cat]})
+    end
+    @categories = Category.all
+  end
 
   def show
-     @upload = Upload.find(params[:id])
+    @upload = Upload.find(params[:id])
   end
 
   def new
@@ -15,7 +25,6 @@ class UploadsController < ApplicationController
   def create
     @upload = Upload.create(upload_params)
     @upload.user = current_user
-    #require 'ruby-debug'; debugger
     if @upload.save
       redirect_to upload_path(@upload)
     else

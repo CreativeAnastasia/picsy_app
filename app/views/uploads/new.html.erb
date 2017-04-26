@@ -1,19 +1,17 @@
 <h1>Upload Now!</h1>
 
 <%= form_for @upload, url: uploads_path, html: { multipart: true } do |form| %>
-
   <%= form.label :description %>
   <%= form.text_field :description %><br>
-
   <%= form.file_field :image %><br><br>
 
-<%= form.label "Choose categorie(s):" %><br />
-<%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
-  <div class="collection-check-box">
-    <%= b.check_box %>
-    <%= b.label %>
-  </div>
-<% end %>
+  <%= form.label "Choose categorie(s):" %><br />
+  <%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
+    <div class="collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+    </div>
+  <% end %>
 
   <%= form.submit 'Upload now!' %>
 <% end %>

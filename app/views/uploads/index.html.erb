@@ -3,6 +3,6 @@
 <%= @uploads.count %>
 <% @uploads.each do |upload| %>
   <p> <%= upload.description %></p>
- <%= image_tag upload.image.url(:small) %>
- <p><%= link_to 'View Image', upload_path(upload) %></p>
+  <p> <%= image_tag upload.image.url(:small) %></p>
+  <p> <%= link_to 'View Image', upload_path(upload) %></p>
 <% end %>

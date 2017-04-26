@@ -26,6 +26,11 @@ body {
   color: #5a5a5a;
 }
 
+li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+}
 
 .navbar.transparent.navbar-inverse {
    background: rgba(0,0,0,0.3);

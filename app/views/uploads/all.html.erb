@@ -1,0 +1,17 @@
+<h1>All Uploads</h1>
+<div class="container">
+  <div class="row text-center">
+    <ul>
+      <li><%= link_to "ALL", all_path(cat: 'all'), class: "btn btn-default" %></li>
+    <% @categories.each do |c| %>
+        <li><%= link_to c.category_name, all_path(cat: c.id), class: "btn btn-default" %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<% @uploads.each do |upload| %>
+  <p> <%= upload.description %></p>
+  <p> <%= image_tag upload.image.url(:small) %></p>
+  <p> <%= link_to 'View Image', upload_path(upload) %></p>
+<% end %>

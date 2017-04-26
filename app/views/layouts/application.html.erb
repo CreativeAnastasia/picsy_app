@@ -25,13 +25,13 @@
     <a class="navbar-brand" href="#">picsy</a>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li class=""><a href="#">Photos</a> </li>
+          <li class="photos"><%= link_to 'Photos', all_path %></li>
           <li> <a href="#">About</a> </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <p class="navbar-text">
             <% if current_user %> Welcome, <%= current_user.first_name %></p>
-          <li class="account"><%= link_to 'Account', account_path %></li>
+          <li class="account"><%= link_to 'Account', profile_path %></li>
           <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
             <% else %>
           <li class="login"><%= link_to 'Log In', login_path %></li>

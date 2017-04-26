@@ -1,15 +1,15 @@
 <h1>Edit the upload</h1>
+
 <%= form_for @upload, html: { multipart: true } do |form| %>
 
   <% if @upload.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this picture from being saved:</h2>
-
-      <ul>
-      <% @upload.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+          <% @upload.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
     </div>
   <% end %>
 
@@ -17,6 +17,7 @@
   <%= form.text_field :description %><br>
 
   <%= form.file_field :image %><br><br>
+
   <%= form.label "Choose categorie(s):" %><br />
   <%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
     <div class="collection-check-box">
