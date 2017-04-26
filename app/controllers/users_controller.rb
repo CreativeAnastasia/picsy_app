@@ -12,6 +12,16 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+      if @user.update(user_params)
+        redirect_to profile_path, notice: 'Account was successfully updated.'
+      else
+        render :edit
+      end
   end
 
 
@@ -19,7 +29,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "You've succesfully completed the most annoying task!"
-      redirect_to root_path
+      redirect_to profile_path
     else
       render :new
     end

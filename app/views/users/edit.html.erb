@@ -1,5 +1,18 @@
 <h1>My profile</h1>
 
-<p> First name is: <%= current_user.first_name %> </p>
-<p> Last name is:  <%= current_user.last_name %> </p>
-<p> Email is:  <%= current_user.email %> </p>
+<h2>If you would like to make changes, please type in!</h2>
+<%= form_for @user,  html: { multipart: true } do |f| %>
+<div class="field">
+    First name: <%= current_user.first_name %>
+    <%= f.text_field :first_name, placeholder: "update your first name" %>
+  </div>
+  <div class="field">
+    ast name:  <%= current_user.last_name %>
+    <%= f.text_field :last_name, placeholder: "update your last name" %>
+  </div>
+  <div class="field">
+    Email:  <%= current_user.email %>
+    <%= f.text_field :email, placeholder: "update your email" %>
+
+    <div class="actions"><%= f.submit "update now"%></div>
+<% end %>

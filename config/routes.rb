@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'users#show', as: :profile
   get '/edit', to: 'users#edit', as: :edit
+  get '/update', to: 'users#update', as: :update
   get '/uploads/all', to: 'uploads#all', as: :all
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :update]
   resources :sessions, only: [:new, :create, :destroy]
   resources :uploads
   resources :categories
