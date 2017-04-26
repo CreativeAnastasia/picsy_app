@@ -7,7 +7,8 @@ categories = [
 { category_name: "Animals"},
 { category_name: "Arts"},
 { category_name: "Objects"},
-{ category_name: "People"}
+{ category_name: "People"},
+{ category_name: "Selfie"}
 ]
 
 Category.create categories

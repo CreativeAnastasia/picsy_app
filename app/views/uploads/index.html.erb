@@ -4,5 +4,5 @@
 <% @uploads.each do |upload| %>
   <p> <%= upload.description %></p>
  <%= image_tag upload.image.url(:small) %>
- <%= link_to 'View Image', upload_path(upload) %></p>
+ <p><%= link_to 'View Image', upload_path(upload) %></p>
 <% end %>

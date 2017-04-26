@@ -7,5 +7,22 @@
 
   <%= form.file_field :image %><br><br>
 
+<%= form.label "Choose categorie(s):" %><br />
+<%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
+  <div class="collection-check-box">
+    <%= b.check_box %>
+    <%= b.label %>
+  </div>
+<% end %>
+
+<div class="container">
+  <div class="row text-center">
+    <% @categories.each do |c| %>
+      <label for="default" class="btn btn-default"><%= c.category_name %> <input type="checkbox" id="default" class="badgebox"></label>
+    <% end %>
+  </div>
+</div>
+
   <%= form.submit 'Upload now!' %>
 <% end %>
+

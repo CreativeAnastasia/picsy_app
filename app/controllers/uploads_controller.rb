@@ -1,7 +1,7 @@
 class UploadsController < ApplicationController
   def index
     @uploads = Upload.all
-  end
+      end
 
   def show
      @upload = Upload.find(params[:id])
@@ -9,13 +9,15 @@ class UploadsController < ApplicationController
 
   def new
     @upload = Upload.new
+    @categories = Category.all
   end
 
   def create
     @upload = Upload.create(upload_params)
     @upload.user = current_user
+    #require 'ruby-debug'; debugger
     if @upload.save
-      redirect_to uploads_path
+      redirect_to upload_path(@upload)
     else
       render :new
     end
@@ -46,7 +48,7 @@ class UploadsController < ApplicationController
 
 private
   def upload_params
-    params.require(:upload).permit(:description, :image)
+    params.require(:upload).permit(:description, :image, category_ids:[])
   end
 end
 
