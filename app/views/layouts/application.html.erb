@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="/assets/shutter7.png">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,45 +17,38 @@
   </head>
 
   <body>
-<div class="container">
-  <nav class="navbar transparent navbar-inverse  navbar-fixed-top">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"> </span>
-        <span class="icon-bar"> </span>
-        <span class="icon-bar"> </span>
-      </button>
+    <nav class="navbar transparent navbar-inverse  navbar-fixed-top">
+      <div class="container-fluid">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+        </button>
 
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
-          <li class="photos"><%= link_to 'picsy', root_path %></li>
-          <li class="photos"><%= link_to 'Photos', all_path %></li>
-          <li> <a href="#">About</a> </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <p class="navbar-text">
-            <% if current_user %> Welcome, <%= current_user.first_name %></p>
-          <li class="account"><%= link_to 'Account', profile_path %></li>
-          <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
-            <% else %>
-          <li class="login"><%= link_to 'Log In', login_path %></li>
-          <li class="signup"><%= link_to 'Sign Up', new_user_path %> </li>
-            <% end %>
-        </ul>
-      </div>
-  </nav>
-</div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="pics"><%= link_to 'picsy', root_path %></li>
+            <li class="photos"><%= link_to 'Photos', all_path %></li>
+            <li> <a href="#">About</a> </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav navbar-nav navbar-text">
+              <% if current_user %> Welcome, <%= current_user.first_name %></li>
+            <li class="account"><%= link_to 'Account', profile_path %></li>
+            <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+              <% else %>
+            <li class="login"><%= link_to 'Log In', login_path %></li>
 
-<div class="container">
-    <div class="navbar transparent navbar-inverse navbar-fixed-bottom">
-        <div class="navbar-text pull-right">
-          <p> made with &hearts;</p>
+            <li class="signup"><%= link_to 'Sign Up', new_user_path %> </li>
+              <% end %>
+          </ul>
         </div>
       </div>
-</div>
+    </nav>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <%= yield %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    <%= yield %>
   </body>
+  <footer>
+    <div class="hearts"> made with &hearts;</div>
+  </footer>
 </html>
