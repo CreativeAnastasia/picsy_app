@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "You've succesfully completed the most annoying task!"
+      flash[:notice] = "You've succesfully completed the most annoying task - created your profile:)!"
       redirect_to profile_path
     else
       render :new

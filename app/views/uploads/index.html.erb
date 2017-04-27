@@ -1,6 +1,9 @@
 <h1>My Uploads</h1>
 
-<%= @uploads.count %>
+
+<p id="notice"><%= notice %></p>
+
+<h3> You have <%= @uploads.count %> uploads so far! </h3>
 <% @uploads.each do |upload| %>
   <p> <%= upload.description %></p>
   <p> <%= image_tag upload.image.url(:small) %></p>
