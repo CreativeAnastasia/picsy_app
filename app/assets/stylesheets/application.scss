@@ -190,10 +190,11 @@ input::-webkit-input-placeholder {
 }
 
 .col-xs-offset-4 {
-    margin-left: 33.33333333%;
-    background: rgba(136, 143, 151, 0.78);
-    padding-bottom: 20px;
-    margin-top: 10px;
+  margin-left: 33.33333333%;
+  background: rgba(204, 204, 204, 0.88);
+  padding-bottom: 20px;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.43);
 }
 
 .categories {
@@ -239,6 +240,25 @@ input::-webkit-input-placeholder {
   margin-right: 10px;
 }
 
+#account {
+  color: black;
+  font-style: bold;
+
+}
+.backgrnd {
+  background-color: rgba(255, 255, 255, 0.62);
+  margin: 0 auto;
+  border-radius: 4px;
+  margin: 40px;
+}
+
+.new-btn {
+  background-color: rgba(152, 84, 96, 0.44);
+  margin: 10px;
+}
+.new-btn:hover {
+  background-color: rgba(91, 115, 118, 0.60);
+}
 
 
 
