@@ -1,11 +1,20 @@
-<li>Description<p>
 
-<%= @upload.description %></p></li>
-<%= image_tag @upload.image.url(:medium) %>
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+
+<p>Description:</p>
+<div class="form-control">
+<%= @upload.description %></div>
+
+<%= image_tag @upload.image.url(:medium), :class => "img-responsive img-thumbnail"  %>
 <td><%= @upload.categories.map(&:category_name).sort.join(", ") %></td>
 
 <p id="notice"><%= notice %></p>
 <% if current_user && @upload.user == current_user %>
   <%= link_to 'Delete', @upload, method: :delete, data: { confirm: 'Are you sure?' } if current_user %>
+  <div class="pull-right">
   <%= link_to 'Edit your pic', edit_upload_path %>
+  </div>
 <% end %>
+</div>
+</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3000/uploads/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+
+    
+    
+
+    <link rel="stylesheet" href="./picsy_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./picsy_files/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" media="all" href="./picsy_files/application.self-ee905cc008cca62f952817340a80057c52947ccba8d44dd886a22512f91ee1ce.css" data-turbolinks-track="reload">
+    <script src="./picsy_files/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js" data-turbolinks-track="reload"></script>
+<script src="./picsy_files/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js" data-turbolinks-track="reload"></script>
+<script src="./picsy_files/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js" data-turbolinks-track="reload"></script>
+<script src="./picsy_files/action_cable.self-5454023407ffec0d29137c7110917e1e745525ae9afbc05f52104c4cd6597429.js" data-turbolinks-track="reload"></script>
+<script src="./picsy_files/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js" data-turbolinks-track="reload"></script>
+<script src="./picsy_files/application.self-afe802b04eaf1de2ea762489c83c08aa4c4ff3ff13c21566e43cb710683f5abc.js" data-turbolinks-track="reload"></script>
+
+    <link href="./picsy_files/css" rel="stylesheet">
+  <title>picsy</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="2wY757wnjhDTxQiOdO6TqgRBm0FDLqc44JeP59we1cVMzPuxEZQPjGmWdTdmxvEZZRkHlRVFSSFAKfHOaPBTog=="><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" type="image/png" href="http://localhost:3000/assets/shutter7.png"></head>
+
+  <body>
+    <nav class="navbar transparent navbar-inverse  navbar-fixed-top">
+      <div class="container-fluid">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+        </button>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="pics"><a href="http://localhost:3000/">picsy</a></li>
+            <li class="photos"><a href="http://localhost:3000/uploads/all">Photos</a></li>
+            <li> <a href="http://localhost:3000/uploads/new#">About</a> </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav navbar-nav navbar-text">
+               Welcome, Anastasia
+            </li>
+            <li class="account"><a href="http://localhost:3000/profile">Account</a></li>
+            <li class="logout"><a rel="nofollow" data-method="delete" href="http://localhost:3000/sessions/dummy">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div class="pull-right arrow-back">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><a href="http://localhost:3000/uploads/all">go back </a></span>
+
+
+      </div>
+    <div>
+      <div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+    <h1>Upload Now!</h1>
+
+    <form class="new_upload" id="new_upload" enctype="multipart/form-data" action="http://localhost:3000/uploads" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="zFAez5PjV9xLTystLex7hLCyIQAFXxjGGzm7xczYBVSEgy07JYWjmhUVk6fflzlBJ0SYFDP+QueoR3gm1EuP6Q==">
+      <div class="form-group">
+        <label for="upload_description">Description</label>
+        <input class="form-control" type="text" name="upload[description]" id="upload_description">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="file" name="upload[image]" id="upload_image">
+      </div>
+      <div class="form-group">
+      <label for="upload_Choose categorie(s):">Choose categorie(s):</label>
+      <input type="hidden" name="upload[category_ids][]" value="">
+        <div class="collection-check-box">
+          <input type="checkbox" value="8" name="upload[category_ids][]" id="upload_category_ids_8">
+          <label for="upload_category_ids_8">Nature</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="9" name="upload[category_ids][]" id="upload_category_ids_9">
+          <label for="upload_category_ids_9">Travel</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="10" name="upload[category_ids][]" id="upload_category_ids_10">
+          <label for="upload_category_ids_10">Abstract</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="11" name="upload[category_ids][]" id="upload_category_ids_11">
+          <label for="upload_category_ids_11">Animals</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="12" name="upload[category_ids][]" id="upload_category_ids_12">
+          <label for="upload_category_ids_12">Arts</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="13" name="upload[category_ids][]" id="upload_category_ids_13">
+          <label for="upload_category_ids_13">Objects</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="14" name="upload[category_ids][]" id="upload_category_ids_14">
+          <label for="upload_category_ids_14">People</label>
+        </div>
+
+        <div class="collection-check-box">
+          <input type="checkbox" value="15" name="upload[category_ids][]" id="upload_category_ids_15">
+          <label for="upload_category_ids_15">Selfie</label>
+        </div>
+
+      <input type="submit" name="commit" value="Upload now!" class="btn btn-default form-control" data-disable-with="Upload now!">
+  </div></form>
+</div>
+
+
+    </div>
+
+    <div class="hearts">
+      made with ♥
+    </div>
+
+  <script src="./picsy_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</div></body></html>

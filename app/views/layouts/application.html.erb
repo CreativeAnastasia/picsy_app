@@ -13,8 +13,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">  </head>
 
   <body>
     <nav class="navbar transparent navbar-inverse  navbar-fixed-top">
@@ -29,7 +28,6 @@
           <ul class="nav navbar-nav navbar-left">
             <li class="pics"><%= link_to 'picsy', root_path %></li>
             <li class="photos"><%= link_to 'Photos', all_path %></li>
-            <li> <a href="#">About</a> </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="nav navbar-nav navbar-text">
@@ -46,7 +44,12 @@
         </div>
       </div>
     </nav>
+    <% if current_user %>
+      <div class="pull-right arrow-back">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><%= link_to "go back ", :back %></span>
+      <% end %>
 
+      </div>
     <div>
       <%= yield %>
     </div>

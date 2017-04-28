@@ -1,0 +1,256 @@
+/* line 2, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+}
+
+/* line 7, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.blink_me {
+  text-align: center;
+  color: #600000;
+  font-size: 35px;
+  animation: blinker 10s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/* line 20, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.container.signup {
+  padding-top: 30px;
+}
+
+/* line 24, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+body {
+  background: url(/assets/welcome_pic-85493c8cc948f986fbc58cce37ca4ba03353f20b7f6084637724752327fd9b08.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/* line 32, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+a:hover {
+  color: #6c3e3e;
+}
+
+/* line 36, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+}
+
+/* line 42, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.navbar.transparent.navbar-inverse {
+  background: rgba(0, 0, 0, 0.3);
+  border: 0;
+}
+
+/* line 47, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.nav.navbar-nav li a {
+  font-size: 20px;
+  color: white;
+}
+
+/* line 51, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.nav.navbar-nav li a:hover {
+  background-color: rgba(81, 26, 26, 0.3);
+  color: #fbcbd3;
+}
+
+/* line 56, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-size: 35px;
+}
+
+/* line 60, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+  background-color: rgba(81, 26, 26, 0.2);
+  color: #fbcbd3;
+}
+
+/* line 64, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.navbar-inverse .navbar-text {
+  position: inherit;
+  color: white;
+  margin: 0 10px;
+  padding: 11px 0;
+  height: 50px;
+}
+
+/* line 72, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.hearts {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  color: #500000;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 82, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 65%;
+  margin: auto;
+}
+
+/* line 88, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.main {
+  margin-top: 70px;
+}
+
+/* line 92, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+h1.title {
+  font-size: 50px;
+  font-family: 'Passion One', cursive;
+  font-weight: 400;
+}
+
+/* line 98, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+hr {
+  width: 10%;
+  color: #fff;
+}
+
+/* line 103, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* line 107, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+input,
+input::-webkit-input-placeholder {
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+/* line 113, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.main-login {
+  background-color: rgba(232, 232, 232, 0.85);
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 125, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.main-center {
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 40px 40px;
+}
+
+/* line 133, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.login-button {
+  margin-top: 5px;
+}
+
+/* line 137, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.login-register {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* line 144, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 151, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-signin .form-signin-heading {
+  margin-bottom: 30px;
+}
+/* line 157, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+/* line 166, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 172, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 179, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.img-thumbnail {
+  background: rgba(250, 250, 250, 0.4) !important;
+  box-shadow: 6px 5px 15px 6px #535556;
+  border-color: rgba(97, 95, 97, 0.45);
+}
+
+/* line 185, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+  background: rgba(136, 143, 151, 0.78);
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* line 192, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.categories {
+  padding-left: 0px;
+  margin-bottom: 20px;
+}
+
+/* line 197, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+/* line 202, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 213, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.blue {
+  background-color: rgba(105, 96, 96, 0.84);
+  border-bottom: 5px solid rgba(56, 58, 59, 0.62);
+  text-shadow: 0px -2px rgba(41, 45, 47, 0.7);
+}
+
+/* line 219, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid;
+}
+
+/* line 227, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.label {
+  color: #eee;
+}
+
+/* line 231, /Users/anastasiyavaranetskaya/code/wdi/workspace/project_2/picsy_app/app/assets/stylesheets/application.scss */
+.pull-right.arrow-back {
+  margin-right: 10px;
+}
