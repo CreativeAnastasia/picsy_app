@@ -1,46 +1,42 @@
-
 <div class="container">
   <h1 class="blink_me">welcome to picsy..</h1>
-
-  <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 </div>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators"></ol>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-  </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+        <%= image_tag("pic01.jpg", alt: "Example Image")%>
+          <div class="carousel-caption">
+            <em>"In photography there is a reality so subtle that it becomes more real than reality."</em>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("pic02.jpg", alt: "Example Image")%>
+          <div class="carousel-caption">
+            <em>"There is one thing the photograph must contain, the humanity of the moment."</em>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("pic03.jpg", alt: "Example Image")%>
+          <div class="carousel-caption">
+            <em>"Taking an image, freezing a moment, reveals how rich reality truly is."</em>
+          </div>
+        </div>
+      </div>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-    <%= image_tag("pic01.jpg", alt: "Example Image")%>
-      <div class="carousel-caption">
-        <em>"In photography there is a reality so subtle that it becomes more real than reality."</em>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag("pic02.jpg", alt: "Example Image")%>
-      <div class="carousel-caption">
-        <em>"There is one thing the photograph must contain, the humanity of the moment."</em>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag("pic03.jpg", alt: "Example Image")%>
-      <div class="carousel-caption">
-        <em>"Taking an image, freezing a moment, reveals how rich reality truly is."</em>
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
 </div>
 
 

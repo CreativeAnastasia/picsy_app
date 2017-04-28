@@ -2,19 +2,15 @@
 <html>
   <head>
     <title>picsy</title>
-    <%= csrf_meta_tags %>
+     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="/assets/shutter7.png">
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">  </head>
-
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <body>
     <nav class="navbar transparent navbar-inverse  navbar-fixed-top">
       <div class="container-fluid">
@@ -33,12 +29,11 @@
             <li class="nav navbar-nav navbar-text">
               <% if current_user %> Welcome, <%= current_user.first_name %>
             </li>
-            <li class="account"><%= link_to 'Account', profile_path %></li>
-            <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+              <li class="account"><%= link_to 'Account', profile_path %></li>
+              <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
               <% else %>
-            <li class="login"><%= link_to 'Log In', login_path %></li>
-
-            <li class="signup"><%= link_to 'Sign Up', new_user_path %> </li>
+              <li class="login"><%= link_to 'Log In', login_path %></li>
+              <li class="signup"><%= link_to 'Sign Up', new_user_path %> </li>
               <% end %>
           </ul>
         </div>
@@ -46,18 +41,15 @@
     </nav>
     <% if current_user %>
       <div class="pull-right arrow-back">
-      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><%= link_to "go back ", :back %></span>
-      <% end %>
-
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><%= link_to "go back ", :back %></span>
+        <% end %>
       </div>
-    <div>
-      <%= yield %>
-    </div>
-
-    <div class="hearts">
-      made with &hearts;
-    </div>
-
+      <div>
+        <%= yield %>
+      </div>
+      <div class="hearts">
+        made with &hearts;
+      </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>

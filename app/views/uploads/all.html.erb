@@ -4,8 +4,8 @@
   <div class="row text-center">
     <ul class="categories">
       <li><%= link_to "ALL", all_path(cat: 'all'), class: "action-button shadow animate blue" %></li>
-    <% @categories.each do |c| %>
-        <li><%= link_to c.category_name, all_path(cat: c.id), class: "action-button shadow animate blue" %></li>
+        <% @categories.each do |c| %>
+      <li><%= link_to c.category_name, all_path(cat: c.id), class: "action-button shadow animate blue" %></li>
     <% end %>
     </ul>
   </div>
