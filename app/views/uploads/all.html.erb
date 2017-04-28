@@ -21,7 +21,10 @@
               <%= pic.description %>
             </div>
             <div>
-              <%= image_tag pic.image.url(:small), :class => "img-responsive" %>
+              <%= image_tag pic.image.url(:small), :class => "img-responsive img-thumbnail" %>
+            </div>
+            <div>
+              <%= link_to 'View Image', upload_path(pic) %>
             </div>
           </div>
         <% end %>

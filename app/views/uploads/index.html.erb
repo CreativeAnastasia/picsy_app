@@ -4,8 +4,25 @@
 <p id="notice"><%= notice %></p>
 
 <h3> You have <%= @uploads.count %> uploads so far! </h3>
-<% @uploads.each do |upload| %>
-  <p> <%= upload.description %></p>
-  <p> <%= image_tag upload.image.url(:small) %></p>
-  <p> <%= link_to 'View Image', upload_path(upload) %></p>
-<% end %>
+<ul class="text-center">
+  <div class="container">
+    <% @uploads.each_slice(3) do |row| %>
+      <div class="row">
+        <% row.each do |pic| %>
+          <div class="col-md-4">
+            <div>
+              <%= pic.description %>
+            </div>
+            <div>
+              <%= image_tag pic.image.url(:small), :class => "img-responsive img-thumbnail" %>
+            </div>
+            <div>
+              <%= link_to 'View Image', upload_path(pic) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</ul>
+

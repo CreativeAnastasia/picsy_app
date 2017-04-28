@@ -66,12 +66,13 @@ li {
 }
 
 .hearts {
-  color: #400000;
-  position:absolute;
-  bottom:0;
-  right:0;
-  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  color: #500000;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
