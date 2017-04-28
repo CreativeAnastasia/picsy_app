@@ -1,30 +1,43 @@
-<h1>Edit the upload</h1>
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
 
-<%= form_for @upload, html: { multipart: true } do |form| %>
+    <h1>Edit the upload</h1>
 
-  <% if @upload.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this picture from being saved:</h2>
-        <ul>
-          <% @upload.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-    </div>
-  <% end %>
+    <%= form_for @upload, html: { multipart: true } do |form| %>
 
-  <%= form.label :description %>
-  <%= form.text_field :description %><br>
+      <% if @upload.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this picture from being saved:</h2>
+            <ul>
+              <% @upload.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+        </div>
+      <% end %>
 
-  <%= form.file_field :image %><br><br>
+      <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_field :description, class: "form-control" %>
+      </div>
 
-  <%= form.label "Choose categorie(s):" %><br />
-  <%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
-    <div class="collection-check-box">
-      <%= b.check_box %>
-      <%= b.label %>
-    </div>
-  <% end %>
+      <div class="form-group">
+        <%= form.file_field :image, class: "form-control" %>
+      </div>
 
-  <%= form.submit 'Update' %>
-<% end %>
+
+      <div class="form-group">
+        <%= form.label "Choose categorie(s):" %>
+        <%= form.collection_check_boxes :category_ids, Category.all, :id, :category_name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= form.submit 'Update', class: "form-control" %>
+    <% end %>
+
+  </div>
+</div>

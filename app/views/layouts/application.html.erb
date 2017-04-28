@@ -33,7 +33,8 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="nav navbar-nav navbar-text">
-              <% if current_user %> Welcome, <%= current_user.first_name %></li>
+              <% if current_user %> Welcome, <%= current_user.first_name %>
+            </li>
             <li class="account"><%= link_to 'Account', profile_path %></li>
             <li class="logout"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
               <% else %>
