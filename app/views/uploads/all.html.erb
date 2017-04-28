@@ -1,7 +1,5 @@
-<h1>All Uploads</h1>
-
 <p id="notice"><%= notice %></p>
-
+<h1 class="text-center">All Uploads</h1>
 <div class="container">
   <div class="row text-center">
     <ul>
@@ -13,8 +11,24 @@
   </div>
 </div>
 
-<% @uploads.each do |upload| %>
-  <p> <%= upload.description %></p>
-  <p> <%= image_tag upload.image.url(:small) %></p>
-  <p> <%= link_to 'View Image', upload_path(upload) %></p>
-<% end %>
+<ul class="text-center">
+  <div class="container">
+    <% @uploads.each_slice(3) do |row| %>
+      <div class="row">
+        <% row.each do |pic| %>
+          <div class="col-md-4">
+            <div>
+              <%= pic.description %>
+            </div>
+            <div>
+              <%= image_tag pic.image.url(:small), :class => "img-responsive" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</ul>
+
+
+
